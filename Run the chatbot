@@ -1,0 +1,9 @@
+print("🤖 Customer Service Chatbot is online! Type 'exit' to quit.")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() in ['exit', 'quit']:
+        print("Bot: Thank you for chatting with us!")
+        break
+    response = get_response(user_input)
+    print("Bot:", response)
