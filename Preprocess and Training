@@ -1,0 +1,17 @@
+import nltk
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+nltk.download('punkt')
+
+# Extract questions and intents
+questions = [item["question"] for item in training_data]
+intents = [item["intent"] for item in training_data]
+
+# Vectorize text
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(questions)
+
+# Train classifier
+model = MultinomialNB()
+model.fit(X, intents)
