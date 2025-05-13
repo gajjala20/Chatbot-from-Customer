@@ -1,0 +1,27 @@
+# Sample intents with questions and answers
+training_data = [
+    {"question": "What are your business hours?", "intent": "hours"},
+    {"question": "When do you open?", "intent": "hours"},
+    {"question": "Are you open on weekends?", "intent": "hours"},
+    
+    {"question": "Where is your office located?", "intent": "location"},
+    {"question": "What is your address?", "intent": "location"},
+    
+    {"question": "How can I contact you?", "intent": "contact"},
+    {"question": "Give me your phone number", "intent": "contact"},
+    
+    {"question": "How do I reset my password?", "intent": "password"},
+    {"question": "I forgot my password", "intent": "password"},
+    
+    {"question": "Can I speak to a human?", "intent": "human"},
+    {"question": "I need to talk to someone", "intent": "human"}
+]
+
+# Responses mapped to intents
+responses = {
+    "hours": "Our business hours are 9 AM to 5 PM, Monday to Friday.",
+    "location": "We are located at 123 Main Street, Springfield.",
+    "contact": "You can contact us at support@example.com or call 123-456-7890.",
+    "password": "To reset your password, click on 'Forgot Password' on the login page.",
+    "human": "Please hold while I connect you to a human representative."
+}
