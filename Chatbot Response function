@@ -1,0 +1,4 @@
+def get_response(user_input):
+    X_test = vectorizer.transform([user_input])
+    predicted_intent = model.predict(X_test)[0]
+    return responses.get(predicted_intent, "I'm sorry, I didn't understand that.")
